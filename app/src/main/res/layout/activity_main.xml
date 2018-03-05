@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#80FFC0CB">
+
+        <su.levenetc.android.textsurface.TextSurface
+            android:id="@+id/text_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/line_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.linroid.filtermenu.library.FilterMenuLayout
+                    android:id="@+id/filter_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="8dp"
+                    custom:fm_centerBottom="100dp"
+                    custom:fm_centerHorizontal="true"
+                    custom:fm_collapsedRadius="20dp"
+                    custom:fm_expandedRadius="80dp"
+                    custom:fm_primaryColor="#FFB6C1"
+                    custom:fm_primaryDarkColor="#B3FFA500"></com.linroid.filtermenu.library.FilterMenuLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>
